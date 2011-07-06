@@ -6,6 +6,7 @@
 
 # you can write whatever you want after #blahblahBLAH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 import os
+import sys
 import time
 
 phrases = ["Your father\n was a hamster!",
@@ -34,9 +35,12 @@ i = 0
 # do stuff forever
 while 1:
 	# clear the screen
-	os.system('clear')
+	if sys.platform == "win32":
+		os.system("cls")
+	else:
+		os.system('clear')
+	
 	s = spaces[i]
-
 	print ""
 	print phrases[i]
 	print ""
