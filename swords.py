@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# '_why the lucky swordfight' by Natan Yellin
+# "_why the lucky swordfight" by Natan Yellin
 # inspired by _why's presentation at Carnegie Melon: http://vimeo.com/5047563
 # some comments written by kids
 
@@ -14,31 +14,35 @@ phrases = ["Your father\n was a hamster!",
 		"My grandmother\ncan fight better!",
 		"No, YOUR father\nwas a hamster!"]
 
-head 	=  r' ~O  O~ '
+head 	=  r" ~O  O~ "
 
-waists	= [r' <|/\|> ',
-	   r' <|--|> ',
-           r' <|\/|> ',
-           r' <|--|> ']
+waists	= [r" <|/\|> ",
+	   r" <|--|> ",
+           r" <|\/|> ",
+           r" <|--|> "]
 
-legs 	= [r' /\  |\ ',
-	   r' /\  /\  ',
-	   r' /|  /\ ',
-	   r' /\  /\  ']
+legs 	= [r" /\  |\ ",
+	   r" /\  /\  ",
+	   r" /|  /\ ",
+	   r" /\ /\  "]
 
 spaces 	= ["  ",
 	   "     ",
 	   "    ",
 	   "   "]
 
+def clear_screen ():
+	if sys.platform == "win32":
+		os.system("cls")
+	else:
+		os.system("clear")
+	return
+
 i = 0
 # do stuff forever
 while 1:
 	# clear the screen
-	if sys.platform == "win32":
-		os.system("cls")
-	else:
-		os.system('clear')
+	clear_screen()
 	
 	s = spaces[i]
 	print ""
